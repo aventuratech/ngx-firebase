@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@ngx-firebase/client": [
+        "dist/ngx-firebase/client/ngx-firebase-client",
+        "dist/ngx-firebase/client"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

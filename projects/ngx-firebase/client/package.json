@@ -1,0 +1,18 @@
+{
+  "name": "@ngx-firebase/client",
+  "description": "Firebase SDK client for Angular",
+  "keywords": ["angular","angular9","firebase","firestore"],
+  "version": "1.0.1",
+  "author": "Aventura Tech / Forrest Lyman",
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/aventuratech/ngx-firebase"
+  },
+  "peerDependencies": {
+    "@angular/common": "^9.1.3",
+    "@angular/core": "^9.1.3",
+    "firebase": "^7.0.0",
+    "tslib": "^1.10.0"
+  }
+}

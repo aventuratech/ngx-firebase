@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NgxFirebaseClientService} from '@ngx-firebase/client';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngx-firebase';
+  constructor(private firebase: NgxFirebaseClientService) {
+    this.firebase.firestore().collection('test').add({tester: 2});
+  }
 }

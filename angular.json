@@ -123,6 +123,50 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngx-firebase"
+    },
+    "@ngx-firebase/client": {
+      "projectType": "library",
+      "root": "projects/ngx-firebase/client",
+      "sourceRoot": "projects/ngx-firebase/client/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-firebase/client/tsconfig.lib.json",
+            "project": "projects/ngx-firebase/client/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-firebase/client/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-firebase/client/src/test.ts",
+            "tsConfig": "projects/ngx-firebase/client/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-firebase/client/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-firebase/client/tsconfig.lib.json",
+              "projects/ngx-firebase/client/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-firebase",
+  "cli": {
+    "analytics": "982f02f5-49af-412d-a803-8d1694e67962"
+  }
 }
